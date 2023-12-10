@@ -1,0 +1,67 @@
+# Byte-compiled / compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# Compiled C extensions
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Dependency directories
+/.venv/
+/vendor/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# PyInstaller
+build/
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# pytest
+__pycache__/
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Pyre type checker
+.pyre/
+
+# Pylance
+/.pylance/
+
+# pipenv
+Pipfile.lock
