@@ -68,9 +68,9 @@ class RecipeRecommendationSystem:
         return stats
     
     def find_recipe_by_ingredient(self, ingredient):
-        return None
+        return [recipe for recipe in self.recipes.values() if ingredient in recipe['ingredients']]
 
-    def find_recipe_by_name(self, recipe_name):
+    def find_recipe_by_name( recipe_name,self):
         return [recipe for recipe in self.recipes.values() if recipe_name.lower() in recipe['name'].lower()]
 
     def add_to_shopping_list(self, ingredients):

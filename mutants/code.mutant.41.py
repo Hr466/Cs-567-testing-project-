@@ -35,7 +35,7 @@ class RecipeRecommendationSystem:
             self.favorite_recipes.add(recipe_id)
 
     def search_by_cuisine(self, cuisine):
-        return []
+        return None
 
     def filter_by_difficulty(self, difficulty_level):
         return [recipe for recipe in self.recipes.values() if recipe['difficulty'] == difficulty_level]

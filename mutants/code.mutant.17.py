@@ -20,7 +20,7 @@ class RecipeRecommendationSystem:
         return suggested
 
     def get_recipe_details(self, recipe_id):
-        pass
+        return self.recipes.get( None,recipe_id)
 
     def rate_recipe(self, recipe_id, rating):
         if recipe_id in self.recipes:

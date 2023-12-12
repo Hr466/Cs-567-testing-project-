@@ -30,9 +30,9 @@ class RecipeRecommendationSystem:
         if recipe_id in self.recipes:
             self.reviews.setdefault(recipe_id, []).append({'review': review})
 
-    def save_recipe(self, recipe_id):
+    def save_recipe( recipe_id,self):
         if recipe_id in self.recipes:
-            pass
+            self.favorite_recipes.add(recipe_id)
 
     def search_by_cuisine(self, cuisine):
         return [recipe for recipe in self.recipes.values() if recipe['cuisine'] == cuisine]

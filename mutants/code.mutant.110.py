@@ -85,10 +85,10 @@ class RecipeRecommendationSystem:
 
     def remove_from_favorites(self, recipe_id):
         if recipe_id in self.favorite_recipes:
-            pass
+            self.favorite_recipes.remove(recipe_id)
 
     def get_recipe_reviews(self, recipe_id):
-        return self.reviews.get(recipe_id, [])
+        return None
 
     def update_recipe(self, recipe_id, updated_recipe):
         if recipe_id in self.recipes:

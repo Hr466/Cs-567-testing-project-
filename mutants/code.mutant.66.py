@@ -43,7 +43,7 @@ class RecipeRecommendationSystem:
 
     def get_top_rated_recipes(self, num_recipes):
         ratings = {recipe_id: sum(review['rating'] for review in reviews) / len(reviews) for recipe_id, reviews in self.reviews.items()}
-        return sorted(self.recipes.keys(), reverse=True)[:num_recipes]
+        return sorted(self.recipes.keys(), key=lambda x: ratings.get(x, 0), reverse=False)[:num_recipes]
 
     def suggest_random_recipe(self):
         return random.choice(list(self.recipes.values()))

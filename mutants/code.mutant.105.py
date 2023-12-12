@@ -78,12 +78,12 @@ class RecipeRecommendationSystem:
         return self.shopping_list
 
     def clear_shopping_list(self):
-        pass
+        self.shopping_list = []
 
     def get_favorite_recipes(self):
         return [self.recipes[recipe_id] for recipe_id in self.favorite_recipes]
 
-    def remove_from_favorites(self, recipe_id):
+    def remove_from_favorites( recipe_id,self):
         if recipe_id in self.favorite_recipes:
             self.favorite_recipes.remove(recipe_id)
 

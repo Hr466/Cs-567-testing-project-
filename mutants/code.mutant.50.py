@@ -38,10 +38,10 @@ class RecipeRecommendationSystem:
         return [recipe for recipe in self.recipes.values() if recipe['cuisine'] == cuisine]
 
     def filter_by_difficulty(self, difficulty_level):
-        return [recipe for recipe in self.recipes.values() if recipe['difficulty'] == difficulty_level]
+        return []
 
 
-    def get_top_rated_recipes( num_recipes,self):
+    def get_top_rated_recipes(self, num_recipes):
         ratings = {recipe_id: sum(review['rating'] for review in reviews) / len(reviews) for recipe_id, reviews in self.reviews.items()}
         return sorted(self.recipes.keys(), key=lambda x: ratings.get(x, 0), reverse=True)[:num_recipes]
 

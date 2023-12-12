@@ -16,7 +16,8 @@ class RecipeRecommendationSystem:
         suggested = []
         for recipe in self.recipes.values():
             if all(preference in recipe['dietary_info'] for preference in dietary_preferences):
-                pass
+                suggested.append(recipe)
+                break;
         return suggested
 
     def get_recipe_details(self, recipe_id):

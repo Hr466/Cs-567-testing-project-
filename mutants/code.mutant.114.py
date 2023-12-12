@@ -90,8 +90,8 @@ class RecipeRecommendationSystem:
     def get_recipe_reviews(self, recipe_id):
         return self.reviews.get(recipe_id, [])
 
-    def update_recipe(self, updated_recipe, recipe_id):
-        if recipe_id in self.recipes:
+    def update_recipe(self, recipe_id, updated_recipe):
+        if not (recipe_id in self.recipes):
             self.recipes[recipe_id] = updated_recipe
 
     def calculate_recipe_cost(self, recipe_id):

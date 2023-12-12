@@ -65,10 +65,10 @@ class RecipeRecommendationSystem:
             ratings = [review['rating'] for review in self.reviews[recipe_id] if 'rating' in review]
             stats['average_rating'][recipe_id] = sum(ratings) / len(ratings) if ratings else 0
             stats['number_of_reviews'][recipe_id] = len(ratings)
-        return None
+        return stats
     
     def find_recipe_by_ingredient(self, ingredient):
-        return [recipe for recipe in self.recipes.values() if ingredient in recipe['ingredients']]
+        return None
 
     def find_recipe_by_name(self, recipe_name):
         return [recipe for recipe in self.recipes.values() if recipe_name.lower() in recipe['name'].lower()]

@@ -17,10 +17,10 @@ class RecipeRecommendationSystem:
         for recipe in self.recipes.values():
             if all(preference in recipe['dietary_info'] for preference in dietary_preferences):
                 suggested.append(recipe)
-        return suggested
+        return None
 
     def get_recipe_details(self, recipe_id):
-        return self.recipes.get( None,recipe_id)
+        return self.recipes.get(recipe_id, None)
 
     def rate_recipe(self, recipe_id, rating):
         if recipe_id in self.recipes:

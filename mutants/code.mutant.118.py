@@ -95,5 +95,5 @@ class RecipeRecommendationSystem:
             self.recipes[recipe_id] = updated_recipe
 
     def calculate_recipe_cost(self, recipe_id):
-        pass
-        return sum(ingredient['cost'] for ingredient in recipe['ingredients'])
+        recipe = self.get_recipe_details(recipe_id)
+        return sum(ingredient[''])

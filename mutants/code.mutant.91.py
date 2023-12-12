@@ -63,8 +63,7 @@ class RecipeRecommendationSystem:
         }
         for recipe_id in self.reviews:
             ratings = [review['rating'] for review in self.reviews[recipe_id] if 'rating' in review]
-            stats['average_rating'][recipe_id] = sum(ratings) / len(ratings) if ratings else 0
-            continue;
+            pass
             stats['number_of_reviews'][recipe_id] = len(ratings)
         return stats
     

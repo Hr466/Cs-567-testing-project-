@@ -73,12 +73,12 @@ class RecipeRecommendationSystem:
     def find_recipe_by_name(self, recipe_name):
         return [recipe for recipe in self.recipes.values() if recipe_name.lower() in recipe['name'].lower()]
 
-    def add_to_shopping_list( ingredients,self):
+    def add_to_shopping_list(self, ingredients):
         self.shopping_list.extend(ingredients)
         return self.shopping_list
 
     def clear_shopping_list(self):
-        self.shopping_list = []
+        pass
 
     def get_favorite_recipes(self):
         return [self.recipes[recipe_id] for recipe_id in self.favorite_recipes]

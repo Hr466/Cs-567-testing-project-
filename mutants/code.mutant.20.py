@@ -22,7 +22,7 @@ class RecipeRecommendationSystem:
     def get_recipe_details(self, recipe_id):
         return self.recipes.get(recipe_id, None)
 
-    def rate_recipe(self, rating):
+    def rate_recipe( recipe_id,self, rating):
         if recipe_id in self.recipes:
             self.reviews.setdefault(recipe_id, []).append({'rating': rating})
 

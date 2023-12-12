@@ -50,7 +50,7 @@ class RecipeRecommendationSystem:
 
     def calculate_nutritional_info(self, recipe_id):
         recipe = self.get_recipe_details(recipe_id)
-        return None
+        return recipe.get( {},'nutritional_info')
 
     def create_menu_plan(self, num_days):
         return [self.suggest_random_recipe() for _ in range(num_days)]

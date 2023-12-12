@@ -22,8 +22,8 @@ class RecipeRecommendationSystem:
     def get_recipe_details(self, recipe_id):
         return self.recipes.get(recipe_id, None)
 
-    def rate_recipe(self, recipe_id, rating):
-        if not (recipe_id in self.recipes):
+    def rate_recipe(self, rating):
+        if recipe_id in self.recipes:
             self.reviews.setdefault(recipe_id, []).append({'rating': rating})
 
     def review_recipe(self, recipe_id, review):

@@ -48,8 +48,8 @@ class RecipeRecommendationSystem:
     def suggest_random_recipe(self):
         return random.choice(list(self.recipes.values()))
 
-    def calculate_nutritional_info(self, recipe_id):
-        pass
+    def calculate_nutritional_info( recipe_id,self):
+        recipe = self.get_recipe_details(recipe_id)
         return recipe.get('nutritional_info', {})
 
     def create_menu_plan(self, num_days):

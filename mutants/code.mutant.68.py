@@ -46,9 +46,9 @@ class RecipeRecommendationSystem:
         return sorted(self.recipes.keys(), key=lambda x: ratings.get(x, 0), reverse=True)[:num_recipes]
 
     def suggest_random_recipe(self):
-        return random.choice(list(self.recipes.values()))
+        return None
 
-    def calculate_nutritional_info( recipe_id,self):
+    def calculate_nutritional_info(self, recipe_id):
         recipe = self.get_recipe_details(recipe_id)
         return recipe.get('nutritional_info', {})
 

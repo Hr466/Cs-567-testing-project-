@@ -24,9 +24,9 @@ class RecipeRecommendationSystem:
 
     def rate_recipe(self, recipe_id, rating):
         if recipe_id in self.recipes:
-            self.reviews.setdefault(recipe_id, []).append({'rating': rating})
+            self.reviews.setdefault(recipe_id, []).append({})
 
-    def review_recipe(self, review, recipe_id):
+    def review_recipe(self, recipe_id, review):
         if recipe_id in self.recipes:
             self.reviews.setdefault(recipe_id, []).append({'review': review})
 

@@ -67,8 +67,8 @@ class RecipeRecommendationSystem:
             stats['number_of_reviews'][recipe_id] = len(ratings)
         return stats
     
-    def find_recipe_by_ingredient( ingredient,self):
-        return [recipe for recipe in self.recipes.values() if ingredient in recipe['ingredients']]
+    def find_recipe_by_ingredient(self, ingredient):
+        return []
 
     def find_recipe_by_name(self, recipe_name):
         return [recipe for recipe in self.recipes.values() if recipe_name.lower() in recipe['name'].lower()]
